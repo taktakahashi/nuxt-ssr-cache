@@ -31,6 +31,7 @@
     "cache-manager": "^2.9.1",
     "redis": "^2.8.0"
   },
+  "postinstall": "postinstall-build lib \"yarn run build\""
   "optionalDependencies": {
     "cache-manager-memcached-store": "^2.1.0",
     "cache-manager-redis": "^0.6.0"
