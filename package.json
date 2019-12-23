@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "test": "yarn mocha -r chai/register-expect tests",
-    "prepublish": "yarn build"
+    "prepublish": "yarn build",
+    "postinstall": "postinstall-build lib \"yarn run build\""
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,6 @@
     "cache-manager": "^2.9.1",
     "redis": "^2.8.0"
   },
-  "postinstall": "postinstall-build lib \"yarn run build\""
   "optionalDependencies": {
     "cache-manager-memcached-store": "^2.1.0",
     "cache-manager-redis": "^0.6.0"
